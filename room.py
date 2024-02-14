@@ -26,5 +26,11 @@ class Room:
             # player.hasKey will be implemented once the Item class is uploaded
             else:
                 print("You see a large, locked door at the end of the hall.")
-        else:
+        
+        if player.location.isRoom:
+            if player.hasTorch:
+                print("Room has been lit")
+                exit()
+            else:
+                print("Room is Dark, you need a torch")
             self.describe()
